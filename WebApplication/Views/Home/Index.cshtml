@@ -1,0 +1,30 @@
+﻿
+@model WebApplication.Models.CompanyDetail
+
+
+<h4 style="color:green">
+    <br />
+    <b>@ViewBag.Status </b>
+</h4>
+<hr />
+<h3><b>Forms: Save Company Detail</b></h3>
+
+@using (Html.BeginForm("CompanyDetail", "Home", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Enter Name: </td>
+            <td>@Html.TextBoxFor(m => m.name)</td>
+        </tr>
+        <tr>
+            <td>Enter Telephone: </td>
+            <td>@Html.TextBoxFor(m => m.telephone)</td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+}
+
+
